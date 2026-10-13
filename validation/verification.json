@@ -1,0 +1,15 @@
+{
+  "game": "Medal of Honor - Frontline (Korea)",
+  "serial": "SLPM-67525",
+  "source_iso": {"bytes": 3362291712, "sha256": "3ca27eb122f99c7daf724fd126178484a5aaa96393456968f1ca6d7cb117af65"},
+  "output_iso": {"bytes": 3695771648, "sha256": "0093d3105f26eaab6a7cbfc96d6fbbca4e2982b673ed90c01ba8ce2943226cad"},
+  "patch": {"file": "Medal_of_Honor_Frontline_PS2_KO_v1.0.xdelta", "bytes": 168810573, "sha256": "73e29d09aa0d749295290bf4196f751c2c3bbafb2419702d911365f6ffdb6ce8"},
+  "rebuild_from_source_matches_output": true,
+  "xdelta_roundtrip_matches_output": true,
+  "translation": {"ui_strings_translated": 859, "subtitle_blocks_translated": 495, "hangul_syllables": 724, "format_check_errors": 0},
+  "elf_code_modified": false,
+  "game_crc": {"original": "E560ED68", "korean": "E560ED68"},
+  "filesystems_updated": ["ISO9660", "UDF"],
+  "runtime_checked_pcsx2": ["boot", "main menu", "mission select and mission log", "difficulty", "loading screen", "D-Day intro", "in-game subtitles", "ammo HUD", "pause", "save/continue screen", "options subtitles", "gallery", "controller config art", "widescreen 16:9 patch"],
+  "unverified": ["full playthrough", "all HQ hints on screen", "memory card error messages", "PS2 hardware"]
+}
