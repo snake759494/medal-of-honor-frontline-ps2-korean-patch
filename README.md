@@ -1,20 +1,22 @@
-# 메달 오브 아너 프론트라인 · PS2 한글 패치 v1.0
+# 메달 오브 아너 프론트라인 · PS2 한글 패치 v1.1
 
 대상: **Medal of Honor - Frontline (Korea), SLPM-67525 — 한국판(한국 정식 발매판)**. 한국판이지만 게임 안의 글자·음성은 영어로만 들어 있습니다.
 
 비공식 팬 한글 패치입니다. 적법하게 보유한 원본 ISO에 xdelta 패치를 적용해 사용합니다.
-릴리즈 첨부 파일은 xdelta와 PCSX2용 16:9 와이드 패치(pnach)이며 원본·완성 ISO, 게임 파일, 폰트는 배포하지 않습니다.
+릴리즈 첨부 파일은 xdelta 두 종(동영상 자막 포함/nomovie)과 PCSX2용 16:9 와이드 패치(pnach)이며 원본·완성 ISO, 게임 파일, 폰트는 배포하지 않습니다.
 
 ## 패치 적용
 
 | 파일 | SHA-256 |
 |---|---|
 | 한국판 원본 `Medal of Honor - Frontline (Korea).iso` (3,362,291,712바이트) | `3ca27eb122f99c7daf724fd126178484a5aaa96393456968f1ca6d7cb117af65` |
-| 완성 `Medal of Honor - Frontline (Korean).iso` (3,695,771,648바이트) | `0093d3105f26eaab6a7cbfc96d6fbbca4e2982b673ed90c01ba8ce2943226cad` |
-| `Medal_of_Honor_Frontline_PS2_KO_v1.0.xdelta` | `73e29d09aa0d749295290bf4196f751c2c3bbafb2419702d911365f6ffdb6ce8` |
+| 완성 `Medal of Honor - Frontline (Korean).iso` (3,695,771,648바이트) | `f1d1a9df23470536e70c27f4a185623b6d53d2e2ad8eb0d1e4da0135b11aaa58` |
+| nomovie 완성 ISO (동영상 자막 없음, 3,695,771,648바이트) | `0093d3105f26eaab6a7cbfc96d6fbbca4e2982b673ed90c01ba8ce2943226cad` |
+| `Medal_of_Honor_Frontline_PS2_KO_v1.1.xdelta` (동영상 자막 포함, 권장) | `114ff660edc460d5e04c0830362a69b99c43d06046d920912835283af8955929` |
+| `Medal_of_Honor_Frontline_PS2_KO_v1.1_nomovie.xdelta` | `3ec4a919bee0283fb8b44d3a9b65b3201c833d0dda4cbf4b402b4f4de4799c10` |
 
 ```powershell
-xdelta3 -d -s ".\Medal of Honor - Frontline (Korea).iso" .\Medal_of_Honor_Frontline_PS2_KO_v1.0.xdelta ".\Medal of Honor - Frontline (Korean).iso"
+xdelta3 -d -s ".\Medal of Honor - Frontline (Korea).iso" .\Medal_of_Honor_Frontline_PS2_KO_v1.1.xdelta ".\Medal of Honor - Frontline (Korean).iso"
 ```
 
 ## 16:9 와이드 패치
@@ -33,6 +35,13 @@ xdelta3 -d -s ".\Medal of Honor - Frontline (Korea).iso" .\Medal_of_Honor_Frontl
   로딩 화면 미션 제목 19장, 결과 화면(임무 완수·승리·임무 실패·기지로 귀환·전투는 계속된다·불러오는 중),
   D-Day 인트로 시구와 날짜, 일시정지 표시, 훈장 수여 도장, 코드네임 입력, 미션 로그·마켓 가든·디데이 탭, 성과 평가, 보너스.
 
+## 동영상 자막 (v1.1)
+
+음성은 있지만 자막이 없던 동영상 16편(인트로, 미션 브리핑 5편, 역사 영상 6편, 부가 영상 4편)에 한국어 자막 409줄을 넣었습니다.
+영어 음성을 받아 쓴 뒤 직접 번역했고, 블랙 한글패치와 같은 형식(나눔스퀘어 네오 ExtraBold, 흰 글자 + 검은 테두리, 화면 아래 가운데)입니다.
+자막이 걸린 GOP만 다시 인코딩하고 나머지 영상은 원본 비트스트림을 그대로 씁니다. 제작 과정 영상(MAKING 1~6)과
+부가 영상 1·3은 대사 없이 음악·효과음뿐이라 자막이 없습니다.
+
 ## 한글 표시 방식
 
 1. **실행 파일 무수정**: 글자 출력 함수(ELF 0x11a0f8)에 일본판용 2바이트(Shift-JIS형) 디코더가 남아 있고, 폰트(SFN)
@@ -47,13 +56,13 @@ xdelta3 -d -s ".\Medal of Honor - Frontline (Korea).iso" .\Medal_of_Honor_Frontl
 ## 검증
 
 - PCSX2 2.2: 부팅, 메인 메뉴, 미션 선택·미션 로그, 난이도, 로딩 화면, D-Day 인트로, 게임 중 자막·탄약 HUD, 일시정지,
-  저장/계속 화면, 옵션(자막)·갤러리·컨트롤러 설정 화면, 16:9 와이드 패치.
+  저장/계속 화면, 옵션(자막)·갤러리·컨트롤러 설정 화면, 16:9 와이드 패치, 인트로 동영상 자막 전체 재생(부팅 시), 미션 1 브리핑·부가 영상 2 자막 재생(인트로 자리에 넣어 시험).
 - 공개 소스 재빌드 결과와 xdelta 복원 ISO SHA-256 일치. 번역문 서식(%d, %s) 자동 검사 오류 0건.
 - **미검증**: 전체 레벨 완주, 모든 HQ 힌트·메모리 카드 오류 메시지의 실제 화면, 실기.
 
 ## 영어로 남은 부분
 
-동영상(인트로·브리핑·제작 영상) 속 글자, 게임 로고, 제작진 크레딧, 반스용 성과 평가 머리글,
+동영상 화면 속에 원래 찍혀 있는 영문 글자(제목 카드 등), 게임 로고, 제작진 크레딧, 반스용 성과 평가 머리글,
 배경 그림·3D 텍스처 속 작은 영문.
 
 ## 저장소 구성

@@ -172,8 +172,19 @@ def main():
     log(f'한글 {len(ALLK)}자, 오류 {len(errors)}')
     for e in errors[:50]: log('  !', e)
     if '--check' in sys.argv: return
-    isobuild.build(ext.ISO, OUT, files, log)
-    log('완료:', OUT)
+    # ---- 동영상 자막 (translation/movies/*.tsv → movie/enc/*.MPC, 없거나 tsv가 더 새로우면 다시 인코딩)
+    import movie_sub
+    out = OUT
+    if '--nomovie' in sys.argv:
+        out = OUT.replace('(Korean)', '(Korean) (nomovie)')
+    for t in ([] if '--nomovie' in sys.argv else sorted(glob.glob(os.path.join(TR, 'movies', '*.tsv')))):
+        name = os.path.basename(t)[:-4]
+        mp = os.path.join(ROOT, 'movie', 'enc', name + '.MPC')
+        if not os.path.exists(mp) or os.path.getmtime(mp) < os.path.getmtime(t):
+            movie_sub.process(name)
+        files[f'DATA/MOVIES/{name}.MPC'] = open(mp, 'rb').read()
+    isobuild.build(ext.ISO, out, files, log)
+    log('완료:', out)
 
 
 if __name__ == '__main__':

@@ -1,4 +1,6 @@
 3ca27eb122f99c7daf724fd126178484a5aaa96393456968f1ca6d7cb117af65  Medal of Honor - Frontline (Korea).iso
-0093d3105f26eaab6a7cbfc96d6fbbca4e2982b673ed90c01ba8ce2943226cad  Medal of Honor - Frontline (Korean).iso
-73e29d09aa0d749295290bf4196f751c2c3bbafb2419702d911365f6ffdb6ce8  Medal_of_Honor_Frontline_PS2_KO_v1.0.xdelta
+f1d1a9df23470536e70c27f4a185623b6d53d2e2ad8eb0d1e4da0135b11aaa58  Medal of Honor - Frontline (Korean).iso
+0093d3105f26eaab6a7cbfc96d6fbbca4e2982b673ed90c01ba8ce2943226cad  Medal of Honor - Frontline (Korean) (nomovie).iso
+114ff660edc460d5e04c0830362a69b99c43d06046d920912835283af8955929  Medal_of_Honor_Frontline_PS2_KO_v1.1.xdelta
+3ec4a919bee0283fb8b44d3a9b65b3201c833d0dda4cbf4b402b4f4de4799c10  Medal_of_Honor_Frontline_PS2_KO_v1.1_nomovie.xdelta
 e76ef0329b71ba073733ee792c7702206a9a269bba86c069bc027f8b73228680  SLPM-67525_E560ED68.pnach

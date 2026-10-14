@@ -1,17 +1,21 @@
 {
-  "tag": "v1.0",
+  "tag": "v1.1",
   "game": "Medal of Honor - Frontline (Korea) - 한국판",
   "serial": "SLPM-67525",
   "source_sha256": "3ca27eb122f99c7daf724fd126178484a5aaa96393456968f1ca6d7cb117af65",
-  "output_sha256": "0093d3105f26eaab6a7cbfc96d6fbbca4e2982b673ed90c01ba8ce2943226cad",
-  "patch_sha256": "73e29d09aa0d749295290bf4196f751c2c3bbafb2419702d911365f6ffdb6ce8",
-  "patch_bytes": 168810573,
-  "runtime_scope": "PCSX2 boot/menus/mission select/loading/D-Day intro/in-game subtitles and HUD/pause/save screen/options/controller art/widescreen checked; full game and hardware unverified",
+  "output_sha256": "f1d1a9df23470536e70c27f4a185623b6d53d2e2ad8eb0d1e4da0135b11aaa58",
+  "patch_sha256": "114ff660edc460d5e04c0830362a69b99c43d06046d920912835283af8955929",
+  "patch_bytes": 1002504496,
+  "runtime_scope": "PCSX2 boot/menus/mission select/loading/D-Day intro/in-game subtitles and HUD/pause/save screen/options/controller art/widescreen checked; full game and hardware unverified; movie subtitles: INTRO full playback, BRIEF11/EXTRAS2 in intro slot",
   "assets": [
-    "Medal_of_Honor_Frontline_PS2_KO_v1.0.xdelta",
+    "Medal_of_Honor_Frontline_PS2_KO_v1.1.xdelta",
+    "Medal_of_Honor_Frontline_PS2_KO_v1.1_nomovie.xdelta",
     "SLPM-67525_E560ED68.pnach"
   ],
   "widescreen_pnach_sha256": "e76ef0329b71ba073733ee792c7702206a9a269bba86c069bc027f8b73228680",
   "game_crc_original": "E560ED68",
-  "game_crc_korean": "E560ED68"
+  "game_crc_korean": "E560ED68",
+  "nomovie_output_sha256": "0093d3105f26eaab6a7cbfc96d6fbbca4e2982b673ed90c01ba8ce2943226cad",
+  "nomovie_patch_sha256": "3ec4a919bee0283fb8b44d3a9b65b3201c833d0dda4cbf4b402b4f4de4799c10",
+  "nomovie_patch_bytes": 277953455
 }

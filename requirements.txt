@@ -2,3 +2,6 @@ Pillow
 numpy
 opencv-python
 capstone
+av
+imageio-ffmpeg
+faster-whisper
